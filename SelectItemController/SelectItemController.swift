@@ -10,7 +10,8 @@ import UIKit
 
 public struct Parameters {
     public var title: String
-    public var items: [String]
+    public var itemTableView: ItemTableViewType?
+    public var items: [String]?
     public var cancelButton: String
     
     public init(
@@ -19,7 +20,19 @@ public struct Parameters {
         cancelButton: String
         ) {
         self.title = title
+        self.itemTableView = nil
         self.items = items
+        self.cancelButton = cancelButton
+    }
+    
+    public init(
+        title: String,
+        itemTableView: ItemTableViewType,
+        cancelButton: String
+        ) {
+        self.title = title
+        self.itemTableView = itemTableView
+        self.items = nil
         self.cancelButton = cancelButton
     }
 }
@@ -46,7 +59,10 @@ final public class SelectItemController: NSObject, SelectItemViewControllerDeleg
         // Button Label
         selectItemViewController.buttonTitle = params.cancelButton
         
-        // Item List
+        // Table
+        selectItemViewController.itemTableView = params.itemTableView
+        
+        // Item
         selectItemViewController.items = params.items
         
         // Handler

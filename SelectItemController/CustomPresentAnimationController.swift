@@ -17,7 +17,6 @@ class CustomPresentAnimationController: NSObject, UIViewControllerAnimatedTransi
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        //let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)!
         let toViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as! SelectItemViewController
         let containerView = transitionContext.containerView
         containerView.addSubview(toViewController.view)

@@ -2,8 +2,7 @@
 
 SelectItemController is a single selectable dialog. It's easy to use, written in Swift.
 
-
-![](images/screen02.png)
+![](images/screen02.png) ![](images/screen03.png)
 
 ## Requirements
 - Swift 3.1
@@ -39,13 +38,28 @@ To integrate "SelectItemController.framework" into your Xcode project
 
 
 ## Usage
+### Default
 ```swift
-let list = ["First Item", "Second Item", "Third Item", "Fourth Item", "Fifth Item"]
-let params = Parameters(title: "Select Item ...", items: list, cancelButton: "Cancel")
+let items = ["First Item", "Second Item", "Third Item", "Fourth Item", "Fifth Item"]
+let params = Parameters(title: "Select Item ...", items: items, cancelButton: "Cancel")
     
 SelectItemController().show(parent: self, params: params) { (index) in
     if let index = index {
-        print("selected: \(list[index])")
+        print("selected: \(items[index])")
+    } else {
+        print("cancel")
+    }
+}
+```
+
+### Custom
+```swift
+let customTableView = CustomTableView() // User-created UITableView and custom cell
+let params = Parameters(title: "Select Item ...", itemTableView: customTableView, cancelButton: "Cancel")
+    
+SelectItemController().show(parent: self, params: params) { (index) in
+    if let index = index {
+        print("selected: \(customTableView.items[index])")
     } else {
         print("cancel")
     }

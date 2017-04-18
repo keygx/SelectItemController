@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gWC-2E-hde">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gWC-2E-hde">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -62,10 +62,10 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gaU-4R-1Sn">
                                 <rect key="frame" x="55" y="186" width="265" height="294"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gw9-4v-q7O" customClass="ItemTableView" customModule="SelectItemController" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ubY-Aa-1pW">
                                         <rect key="frame" x="0.0" y="50" width="265" height="200"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select one" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXJ-Ac-tqk">
                                         <rect key="frame" x="0.0" y="0.0" width="265" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -94,13 +94,13 @@
                                     <constraint firstItem="NXJ-Ac-tqk" firstAttribute="top" secondItem="gaU-4R-1Sn" secondAttribute="top" id="1VB-eY-JTD"/>
                                     <constraint firstAttribute="height" constant="294" id="2Qa-4N-ZRl"/>
                                     <constraint firstAttribute="width" constant="265" id="9cR-Hh-teh"/>
+                                    <constraint firstItem="ubY-Aa-1pW" firstAttribute="leading" secondItem="gaU-4R-1Sn" secondAttribute="leading" id="CkY-g7-N7j"/>
                                     <constraint firstAttribute="bottom" secondItem="awK-Rw-ID3" secondAttribute="bottom" id="IWn-Dy-Zt7"/>
-                                    <constraint firstItem="Gw9-4v-q7O" firstAttribute="top" secondItem="NXJ-Ac-tqk" secondAttribute="bottom" id="Rrr-8Z-gcc"/>
+                                    <constraint firstItem="ubY-Aa-1pW" firstAttribute="top" secondItem="NXJ-Ac-tqk" secondAttribute="bottom" id="Lfb-wX-Kya"/>
+                                    <constraint firstItem="awK-Rw-ID3" firstAttribute="top" secondItem="ubY-Aa-1pW" secondAttribute="bottom" id="MBJ-2w-aZh"/>
                                     <constraint firstAttribute="trailing" secondItem="NXJ-Ac-tqk" secondAttribute="trailing" id="W9u-gJ-18M"/>
-                                    <constraint firstItem="awK-Rw-ID3" firstAttribute="top" secondItem="Gw9-4v-q7O" secondAttribute="bottom" id="WUM-Vk-bOS"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gw9-4v-q7O" secondAttribute="trailing" id="a0q-mA-Vrm"/>
                                     <constraint firstItem="awK-Rw-ID3" firstAttribute="leading" secondItem="gaU-4R-1Sn" secondAttribute="leading" id="jYH-1e-PP8"/>
-                                    <constraint firstItem="Gw9-4v-q7O" firstAttribute="leading" secondItem="gaU-4R-1Sn" secondAttribute="leading" id="t4A-C8-Xmf"/>
+                                    <constraint firstAttribute="trailing" secondItem="ubY-Aa-1pW" secondAttribute="trailing" id="oci-g7-IeY"/>
                                     <constraint firstItem="NXJ-Ac-tqk" firstAttribute="leading" secondItem="gaU-4R-1Sn" secondAttribute="leading" id="www-4A-for"/>
                                     <constraint firstAttribute="trailing" secondItem="awK-Rw-ID3" secondAttribute="trailing" id="yDt-fx-QqB"/>
                                 </constraints>
@@ -119,9 +119,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnClose" destination="awK-Rw-ID3" id="g6S-e8-jHg"/>
+                        <outlet property="containerView" destination="ubY-Aa-1pW" id="GZr-NZ-KtR"/>
                         <outlet property="dialogView" destination="gaU-4R-1Sn" id="woO-8S-6Lt"/>
                         <outlet property="effectView" destination="d0e-ww-e5K" id="QOk-We-5xr"/>
-                        <outlet property="itemTableView" destination="Gw9-4v-q7O" id="jOO-nD-9UA"/>
                         <outlet property="titleLabel" destination="NXJ-Ac-tqk" id="5PP-tc-YML"/>
                     </connections>
                 </viewController>
