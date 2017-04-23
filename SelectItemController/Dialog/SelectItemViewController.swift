@@ -16,11 +16,12 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
 
     var dialogTitle = ""
     var buttonTitle = ""
-    var items = [String]()
+    var itemTableView: ItemTableViewType?
+    var items: [String]?
     
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var btnClose: UIButton?
-    @IBOutlet weak var itemTableView: ItemTableView?
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dialogView: UIView?
     @IBOutlet weak var effectView: UIView!
     
@@ -46,8 +47,34 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
         btnClose?.setTitle(buttonTitle, for: .normal)
         
         // Item List
-        itemTableView?.items = items
-        itemTableView?.itemTableViewDelegate = self
+        if let tableView = itemTableView {
+            // Custom
+            var itemTableView = tableView
+            itemTableView.itemTableViewDelegate = self
+            
+            let v = itemTableView as! UITableView
+            v.frame = CGRect(x: 0,
+                             y: 0,
+                             width: containerView.frame.width,
+                             height: containerView.frame.height)
+            
+            containerView.addSubview(v)
+            
+        } else {
+            // Default
+            let itemTableView = DefaultTableView(frame: CGRect(x: 0,
+                                                               y: 0,
+                                                               width: containerView.frame.width,
+                                                               height: containerView.frame.height),
+                                                 style: .plain)
+            if let items = items {
+                itemTableView.items = items
+            }
+            
+            itemTableView.itemTableViewDelegate = self
+            
+            containerView.addSubview(itemTableView)
+        }
     }
     
     override func didReceiveMemoryWarning() {

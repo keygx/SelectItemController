@@ -1,51 +1,54 @@
 //
-//  ItemTableView.swift
-//  SelectItemController
+//  CustomTableView.swift
+//  SelectItemControllerSample
 //
 //  Created by keygx on 2017/03/14.
 //  Copyright © 2017年 keygx. All rights reserved.
 //
 
 import UIKit
+import SelectItemController
 
-@objc protocol ItemTableViewDelegate {
-    @objc func didTapped(index: Int)
-}
-
-final class ItemTableView: UITableView {
-
-    var items = [String]()
+final class CustomTableView: UITableView, ItemTableViewType, UITableViewDataSource, UITableViewDelegate {
+    
+    let items = ["First Item", "Second Item", "Third Item", "Fourth Item", "Fifth Item"]
     weak var itemTableViewDelegate: ItemTableViewDelegate?
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override init(frame: CGRect, style: UITableViewStyle) {
+        super.init(frame: frame, style: .plain)
         
         initialize()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     private func initialize() {
         
         backgroundColor = UIColor.clear
         
-        register(UITableViewCell.self, forCellReuseIdentifier: "SelectItemCell")
+        register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         delegate = self
         dataSource = self
     }
-}
-
-extension ItemTableView: UITableViewDataSource {
     
+    // UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-}
-
-extension ItemTableView: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 52.0
+    }
+    
+    // UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SelectItemCell", for: indexPath)
-        cell.textLabel!.text = items[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+        
+        cell.label.text = items[indexPath.row]
+        cell.icon.image = UIImage(named: "arrow")
         
         // Tapped Color
         let selectedView = UIView()
