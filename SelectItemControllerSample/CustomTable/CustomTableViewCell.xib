@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="272" y="8" width="36" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="36" id="0Q8-5w-Dyw"/>
-                            <constraint firstAttribute="height" constant="36" id="fkS-7R-u5s"/>
+                            <constraint firstAttribute="height" constant="36" id="GXO-Oh-ORT"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1f-A5-eZy">
@@ -36,7 +36,6 @@
                     <constraint firstAttribute="trailing" secondItem="II6-Kc-2dW" secondAttribute="trailing" constant="12" id="4c6-4L-qg9"/>
                     <constraint firstAttribute="bottom" secondItem="h1f-A5-eZy" secondAttribute="bottom" constant="12" id="Dih-dT-7Pr"/>
                     <constraint firstItem="II6-Kc-2dW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Mzs-a3-eMK"/>
-                    <constraint firstAttribute="bottom" secondItem="II6-Kc-2dW" secondAttribute="bottom" constant="7.5" id="UBB-c9-znn"/>
                     <constraint firstItem="h1f-A5-eZy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="be9-xy-NIK"/>
                     <constraint firstItem="h1f-A5-eZy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="vS1-uf-vEr"/>
                     <constraint firstAttribute="trailing" secondItem="h1f-A5-eZy" secondAttribute="trailing" constant="58" id="wvz-9v-M6M"/>
