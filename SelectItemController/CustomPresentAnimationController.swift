@@ -21,10 +21,10 @@ class CustomPresentAnimationController: NSObject, UIViewControllerAnimatedTransi
         let containerView = transitionContext.containerView
         containerView.addSubview(toViewController.view)
         
-        toViewController.dialogView?.alpha = 0.1
-        toViewController.dialogView?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-        toViewController.effectView.alpha = 0.1
-        toViewController.effectView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
+        toViewController.dialogView?.alpha = 0.2
+        toViewController.dialogView?.transform = CGAffineTransform(scaleX: 1.16, y: 1.16)
+        toViewController.effectView.alpha = 0.2
+        toViewController.effectView.transform = CGAffineTransform(scaleX: 1.16, y: 1.16)
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
                        delay: 0.0,
