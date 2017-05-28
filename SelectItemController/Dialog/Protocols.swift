@@ -12,6 +12,6 @@ import UIKit
     @objc func didTapped(index: Int)
 }
 
-public protocol ItemTableViewType {
+public protocol ItemTableViewType: class {
     weak var itemTableViewDelegate: ItemTableViewDelegate? { get set }
 }

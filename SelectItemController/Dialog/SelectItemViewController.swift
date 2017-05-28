@@ -49,7 +49,7 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
         // Item List
         if let tableView = itemTableView {
             // Custom
-            var itemTableView = tableView
+            let itemTableView = tableView
             itemTableView.itemTableViewDelegate = self
             
             let v = itemTableView as! UITableView
