@@ -29,7 +29,7 @@ class CustomPresentAnimationController: NSObject, UIViewControllerAnimatedTransi
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
                        delay: 0.0,
                        options: [.curveEaseIn, .curveEaseOut],
-                       animations: { _ in
+                       animations: {
                 toViewController.dialogView?.alpha = 1.0
                 toViewController.dialogView?.transform = CGAffineTransform.identity
                 toViewController.effectView.alpha = 1.0
