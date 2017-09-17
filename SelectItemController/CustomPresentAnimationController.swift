@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class CustomPresentAnimationController: NSObject, UIViewControllerAnimatedTransitioning {
         
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
