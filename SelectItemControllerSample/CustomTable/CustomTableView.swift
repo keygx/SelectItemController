@@ -11,7 +11,7 @@ import SelectItemController
 
 final class CustomTableView: UITableView, ItemTableViewType, UITableViewDataSource, UITableViewDelegate {
     
-    let items = ["First Item", "Second Item", "Third Item", "Fourth Item", "Fifth Item"]
+    var items = [String]()
     weak var itemTableViewDelegate: ItemTableViewDelegate?
     
     override init(frame: CGRect, style: UITableViewStyle) {
