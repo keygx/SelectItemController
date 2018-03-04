@@ -10,6 +10,7 @@
 		36403AD51EA5C4690074F221 /* DefaultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36403AD41EA5C4690074F221 /* DefaultTableView.swift */; };
 		36403AD71EA5C4FF0074F221 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36403AD61EA5C4FF0074F221 /* Protocols.swift */; };
 		36A1F0511E757CF900C3FD2F /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1F0501E757CF900C3FD2F /* CustomPresentAnimationController.swift */; };
+		36CB508E204C171C003ABAB7 /* AsyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB508D204C171C003ABAB7 /* AsyncUtil.swift */; };
 		36CEC4701E72B72B00339CD1 /* Dialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36CEC46D1E72B72B00339CD1 /* Dialog.storyboard */; };
 		36CEC4721E72B72B00339CD1 /* SelectItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC46F1E72B72B00339CD1 /* SelectItemViewController.swift */; };
 		36F769F11EA65C4100428D66 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 36F769ED1EA65C4100428D66 /* arrow.png */; };
@@ -55,6 +56,7 @@
 		36403AD41EA5C4690074F221 /* DefaultTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableView.swift; path = Dialog/DefaultTableView.swift; sourceTree = "<group>"; };
 		36403AD61EA5C4FF0074F221 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Dialog/Protocols.swift; sourceTree = "<group>"; };
 		36A1F0501E757CF900C3FD2F /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
+		36CB508D204C171C003ABAB7 /* AsyncUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtil.swift; sourceTree = "<group>"; };
 		36CEC46D1E72B72B00339CD1 /* Dialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dialog.storyboard; path = Dialog/Dialog.storyboard; sourceTree = "<group>"; };
 		36CEC46F1E72B72B00339CD1 /* SelectItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectItemViewController.swift; path = Dialog/SelectItemViewController.swift; sourceTree = "<group>"; };
 		36F769ED1EA65C4100428D66 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				36F769EC1EA65C4100428D66 /* CustomTable */,
 				36FFCC731E7194B400B6C0AD /* AppDelegate.swift */,
 				36FFCC751E7194B400B6C0AD /* ViewController.swift */,
+				36CB508D204C171C003ABAB7 /* AsyncUtil.swift */,
 				36FFCC771E7194B400B6C0AD /* Main.storyboard */,
 				36FFCC7A1E7194B400B6C0AD /* Assets.xcassets */,
 				36FFCC7C1E7194B400B6C0AD /* LaunchScreen.storyboard */,
@@ -284,6 +287,7 @@
 				36FFCC761E7194B400B6C0AD /* ViewController.swift in Sources */,
 				36FFCC741E7194B400B6C0AD /* AppDelegate.swift in Sources */,
 				36F769F31EA65C4100428D66 /* CustomTableViewCell.swift in Sources */,
+				36CB508E204C171C003ABAB7 /* AsyncUtil.swift in Sources */,
 				36F769F21EA65C4100428D66 /* CustomTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
