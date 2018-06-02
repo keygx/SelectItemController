@@ -13,5 +13,5 @@ import UIKit
 }
 
 public protocol ItemTableViewType: class {
-    weak var itemTableViewDelegate: ItemTableViewDelegate? { get set }
+    var itemTableViewDelegate: ItemTableViewDelegate? { get set }
 }
