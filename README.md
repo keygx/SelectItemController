@@ -5,7 +5,7 @@ SelectItemController is a single selectable dialog. It's easy to use, written in
 ![](images/screen02.png) ![](images/screen03.png)
 
 ## Requirements
-- Swift 4.0
+- Swift 4.1
 - iOS 8.0 or later
 
 
