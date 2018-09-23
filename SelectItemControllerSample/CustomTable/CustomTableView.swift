@@ -14,7 +14,7 @@ final class CustomTableView: UITableView, ItemTableViewType, UITableViewDataSour
     var items = [String]()
     weak var itemTableViewDelegate: ItemTableViewDelegate?
     
-    override init(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: .plain)
         
         initialize()

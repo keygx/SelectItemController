@@ -13,7 +13,7 @@ final class DefaultTableView: UITableView, ItemTableViewType {
     var items = [String]()
     weak var itemTableViewDelegate: ItemTableViewDelegate?
     
-    public override init(frame: CGRect, style: UITableViewStyle) {
+    public override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         
         initialize()
