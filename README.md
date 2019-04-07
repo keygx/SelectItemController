@@ -5,7 +5,7 @@ SelectItemController is a single selectable dialog. It's easy to use, written in
 ![](images/screen02.png) ![](images/screen03.png)
 
 ## Requirements
-- Swift 4.2
+- Swift 5
 - iOS 8.0 or later
 
 
@@ -13,28 +13,16 @@ SelectItemController is a single selectable dialog. It's easy to use, written in
 
 ### Carthage
 
-* Cartfile
-
 ```Cartfile
 github "keygx/SelectItemController"
 ```
-or
 
-```Cartfile
-github "keygx/SelectItemController" "branch-name"
-```
-or
+### Swift versions support
 
-```Cartfile
-github "keygx/SelectItemController" "tag"
-```
-
-* install
-
-```
-$ carthage update
-```
-To integrate "SelectItemController.framework" into your Xcode project
+- Swift 5, tag "swift5"
+- Swift 4.2, tag "swift4.2"
+- Swift 4.1, tag "swift4.1"
+- Swift 4.0, tag "swift4.0"
 
 
 ## Usage
