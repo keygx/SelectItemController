@@ -82,13 +82,13 @@ final public class SelectItemController: NSObject, SelectItemViewControllerDeleg
     }
     
     func didSelected(index: Int?) {
+        defer {
+            completionHandler = nil
+        }
+        
         // Callback
         if let handler = completionHandler {
             handler(index)
-        }
-        
-        defer {
-            completionHandler = nil
         }
     }
     
