@@ -15,6 +15,8 @@
 		36CEC4721E72B72B00339CD1 /* SelectItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CEC46F1E72B72B00339CD1 /* SelectItemViewController.swift */; };
 		36EC95E62340B8F600F406EA /* AppEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC95E42340B8F600F406EA /* AppEventHandler.swift */; };
 		36EC95E72340B8F600F406EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC95E52340B8F600F406EA /* SceneDelegate.swift */; };
+		36EC95E92340BFF100F406EA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC95E82340BFF100F406EA /* UIView+Ex.swift */; };
+		36EC95EB2340EBBA00F406EA /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC95EA2340EBB900F406EA /* UIView+Ex.swift */; };
 		36F769F11EA65C4100428D66 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 36F769ED1EA65C4100428D66 /* arrow.png */; };
 		36F769F21EA65C4100428D66 /* CustomTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F769EE1EA65C4100428D66 /* CustomTableView.swift */; };
 		36F769F31EA65C4100428D66 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F769EF1EA65C4100428D66 /* CustomTableViewCell.swift */; };
@@ -63,6 +65,8 @@
 		36CEC46F1E72B72B00339CD1 /* SelectItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectItemViewController.swift; path = Dialog/SelectItemViewController.swift; sourceTree = "<group>"; };
 		36EC95E42340B8F600F406EA /* AppEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEventHandler.swift; sourceTree = "<group>"; };
 		36EC95E52340B8F600F406EA /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		36EC95E82340BFF100F406EA /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Ex.swift"; path = "Dialog/UIView+Ex.swift"; sourceTree = "<group>"; };
+		36EC95EA2340EBB900F406EA /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		36F769ED1EA65C4100428D66 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		36F769EE1EA65C4100428D66 /* CustomTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableView.swift; sourceTree = "<group>"; };
 		36F769EF1EA65C4100428D66 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 				36CEC46F1E72B72B00339CD1 /* SelectItemViewController.swift */,
 				36403AD41EA5C4690074F221 /* DefaultTableView.swift */,
 				36A1F0501E757CF900C3FD2F /* CustomPresentAnimationController.swift */,
+				36EC95E82340BFF100F406EA /* UIView+Ex.swift */,
 			);
 			name = Dialog;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 				36EC95E42340B8F600F406EA /* AppEventHandler.swift */,
 				36FFCC751E7194B400B6C0AD /* ViewController.swift */,
 				36CB508D204C171C003ABAB7 /* AsyncUtil.swift */,
+				36EC95EA2340EBB900F406EA /* UIView+Ex.swift */,
 				36FFCC771E7194B400B6C0AD /* Main.storyboard */,
 				36FFCC7A1E7194B400B6C0AD /* Assets.xcassets */,
 				36FFCC7C1E7194B400B6C0AD /* LaunchScreen.storyboard */,
@@ -293,6 +299,7 @@
 				36FFCC761E7194B400B6C0AD /* ViewController.swift in Sources */,
 				36EC95E72340B8F600F406EA /* SceneDelegate.swift in Sources */,
 				36FFCC741E7194B400B6C0AD /* AppDelegate.swift in Sources */,
+				36EC95EB2340EBBA00F406EA /* UIView+Ex.swift in Sources */,
 				36F769F31EA65C4100428D66 /* CustomTableViewCell.swift in Sources */,
 				36CB508E204C171C003ABAB7 /* AsyncUtil.swift in Sources */,
 				36F769F21EA65C4100428D66 /* CustomTableView.swift in Sources */,
@@ -309,6 +316,7 @@
 				36403AD51EA5C4690074F221 /* DefaultTableView.swift in Sources */,
 				36CEC4721E72B72B00339CD1 /* SelectItemViewController.swift in Sources */,
 				36403AD71EA5C4FF0074F221 /* Protocols.swift in Sources */,
+				36EC95E92340BFF100F406EA /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

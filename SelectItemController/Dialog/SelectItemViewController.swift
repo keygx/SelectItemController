@@ -30,13 +30,20 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // EffectView
-        effectView?.layer.cornerRadius = 12.0
+        if self.view.isDarkMode {
+            dialogView?.layer.borderColor = UIColor.clear.cgColor
+            effectView.isHidden = true
+            titleLabel?.backgroundColor = UIColor(red: 44.0/255.0, green: 44.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+            btnClose?.backgroundColor = UIColor(red: 44.0/255.0, green: 44.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+        } else {
+            dialogView?.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4).cgColor
+            effectView.isHidden = false
+            effectView?.layer.cornerRadius = 12.0
+        }
         
         // DialogView
         dialogView?.layer.cornerRadius = 12.0
         dialogView?.layer.borderWidth = 1.0
-        dialogView?.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4).cgColor
         
         // Modal Background
         view.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.4)

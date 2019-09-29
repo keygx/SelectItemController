@@ -64,9 +64,16 @@ final class CustomTableView: UITableView, ItemTableViewType, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         // Styles
-        cell.backgroundColor = UIColor.clear
-        tableView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.95)
-        tableView.separatorColor = UIColor.lightGray
+        if self.isDarkMode {
+            cell.textLabel?.textColor = UIColor.white
+            cell.backgroundColor = UIColor.clear
+            tableView.backgroundColor = UIColor(red: 28.0/255.0, green: 28.0/255.0, blue: 30.0/255.0, alpha: 1.0)
+            tableView.separatorColor = UIColor(red: 84.0/255.0, green: 84.0/255.0, blue: 88.0/255.0, alpha: 0.6)
+        } else {
+            cell.backgroundColor = UIColor.clear
+            tableView.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.95)
+            tableView.separatorColor = UIColor.lightGray
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
