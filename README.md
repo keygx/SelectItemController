@@ -2,10 +2,20 @@
 
 SelectItemController is a single selectable dialog. It's easy to use, written in Swift.
 
-![](images/screen02.png) ![](images/screen03.png)
+### Light Mode
+
+| Default Cell | Custom Cell |
+|:---:|:---:|
+| ![](images/default_light.png) | ![](images/custom_light.png) |
+
+### Dark Mode
+
+| Default Cell | Custom Cell |
+|:---:|:---:|
+| ![](images/default_dark.png) | ![](images/custom_dark.png) |
 
 ## Requirements
-- Swift 5
+- Swift 5.1
 - iOS 8.0 or later
 
 
@@ -19,6 +29,7 @@ github "keygx/SelectItemController"
 
 ### Swift versions support
 
+- Swift 5.1, tag "swift5.1"
 - Swift 5, tag "swift5"
 - Swift 4.2, tag "swift4.2"
 - Swift 4.1, tag "swift4.1"
