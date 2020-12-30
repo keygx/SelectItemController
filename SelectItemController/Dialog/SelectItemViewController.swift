@@ -12,7 +12,7 @@ protocol SelectItemViewControllerDelegate {
     func didSelected(index: Int?)
 }
 
-final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
+final class SelectItemViewController: UIViewController, ItemTableViewDelegate, MatchParentConstraintType {
 
     var dialogTitle = ""
     var buttonTitle = ""
@@ -20,10 +20,14 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
     var items: [String]?
     
     @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var titleView: UIView!
     @IBOutlet weak var btnClose: UIButton?
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var dialogView: UIView?
-    @IBOutlet weak var effectView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var titleEffectView: UIVisualEffectView!
+    @IBOutlet weak var btnEffectView: UIVisualEffectView!
+    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
     
     var selectItemViewControllerDelegate: SelectItemViewControllerDelegate?
     
@@ -32,18 +36,20 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
 
         if self.view.isDarkMode {
             dialogView?.layer.borderColor = UIColor.clear.cgColor
-            effectView.isHidden = true
-            titleLabel?.backgroundColor = UIColor(red: 44.0/255.0, green: 44.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+            titleView?.backgroundColor = UIColor(red: 44.0/255.0, green: 44.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+            titleEffectView.isHidden = true
             btnClose?.backgroundColor = UIColor(red: 44.0/255.0, green: 44.0/255.0, blue: 46.0/255.0, alpha: 1.0)
+            btnEffectView.isHidden = true
         } else {
             dialogView?.layer.borderColor = UIColor(red: 0.8, green: 0.8, blue: 0.8, alpha: 0.4).cgColor
-            effectView.isHidden = false
-            effectView?.layer.cornerRadius = 12.0
+            titleEffectView.isHidden = false
+            btnEffectView.isHidden = false
         }
         
         // DialogView
         dialogView?.layer.cornerRadius = 12.0
         dialogView?.layer.borderWidth = 1.0
+        dialogView?.clipsToBounds = true
         
         // Modal Background
         view.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.4)
@@ -67,6 +73,8 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
             
             containerView.addSubview(v)
             
+            setConstraint(parent: containerView, subView: v)
+            
         } else {
             // Default
             let itemTableView = DefaultTableView(frame: CGRect(x: 0,
@@ -81,6 +89,32 @@ final class SelectItemViewController: UIViewController, ItemTableViewDelegate {
             itemTableView.itemTableViewDelegate = self
             
             containerView.addSubview(itemTableView)
+            
+            setConstraint(parent: containerView, subView: itemTableView)
+        }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        // adjust height
+        let height = UIScreen.main.bounds.size.height
+        if height <= 320 {
+            tableHeightConstraint.constant = 44 * 3 + 6
+            titleLabel?.numberOfLines = 1
+        } else if height <= 375 {
+            tableHeightConstraint.constant = 44 * 4 + 6
+            titleLabel?.numberOfLines = 2
+        } else if height <= 428 {
+            tableHeightConstraint.constant = 44 * 5 + 6
+            titleLabel?.numberOfLines = 2
+        } else if height <= 568 {
+            tableHeightConstraint.constant = 44 * 5 + 6
+            titleLabel?.numberOfLines = 8
+        } else if height <= 667 {
+            tableHeightConstraint.constant = 44 * 6 + 6
+            titleLabel?.numberOfLines = 9
+        } else {
+            tableHeightConstraint.constant = 44 * 6 + 6
+            titleLabel?.numberOfLines = 10
         }
     }
     

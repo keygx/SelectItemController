@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		36403AD51EA5C4690074F221 /* DefaultTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36403AD41EA5C4690074F221 /* DefaultTableView.swift */; };
 		36403AD71EA5C4FF0074F221 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36403AD61EA5C4FF0074F221 /* Protocols.swift */; };
+		3699E500239D392400B8029C /* MatchParentConstraintType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3699E4FF239D392400B8029C /* MatchParentConstraintType.swift */; };
 		36A1F0511E757CF900C3FD2F /* CustomPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A1F0501E757CF900C3FD2F /* CustomPresentAnimationController.swift */; };
 		36CB508E204C171C003ABAB7 /* AsyncUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CB508D204C171C003ABAB7 /* AsyncUtil.swift */; };
 		36CEC4701E72B72B00339CD1 /* Dialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36CEC46D1E72B72B00339CD1 /* Dialog.storyboard */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		36403AD41EA5C4690074F221 /* DefaultTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DefaultTableView.swift; path = Dialog/DefaultTableView.swift; sourceTree = "<group>"; };
 		36403AD61EA5C4FF0074F221 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Dialog/Protocols.swift; sourceTree = "<group>"; };
+		3699E4FF239D392400B8029C /* MatchParentConstraintType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MatchParentConstraintType.swift; path = Dialog/MatchParentConstraintType.swift; sourceTree = "<group>"; };
 		36A1F0501E757CF900C3FD2F /* CustomPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresentAnimationController.swift; sourceTree = "<group>"; };
 		36CB508D204C171C003ABAB7 /* AsyncUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUtil.swift; sourceTree = "<group>"; };
 		36CEC46D1E72B72B00339CD1 /* Dialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Dialog.storyboard; path = Dialog/Dialog.storyboard; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				36403AD41EA5C4690074F221 /* DefaultTableView.swift */,
 				36A1F0501E757CF900C3FD2F /* CustomPresentAnimationController.swift */,
 				36EC95E82340BFF100F406EA /* UIView+Ex.swift */,
+				3699E4FF239D392400B8029C /* MatchParentConstraintType.swift */,
 			);
 			name = Dialog;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				36CEC4721E72B72B00339CD1 /* SelectItemViewController.swift in Sources */,
 				36403AD71EA5C4FF0074F221 /* Protocols.swift in Sources */,
 				36EC95E92340BFF100F406EA /* UIView+Ex.swift in Sources */,
+				3699E500239D392400B8029C /* MatchParentConstraintType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -452,7 +456,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -467,12 +471,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 3CCNMX7TC9;
 				INFOPLIST_FILE = SelectItemControllerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.SelectItemControllerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -485,12 +491,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1.7.0;
 				DEVELOPMENT_TEAM = 3CCNMX7TC9;
 				INFOPLIST_FILE = SelectItemControllerSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.SelectItemControllerSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -516,6 +524,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.SelectItemController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -545,6 +554,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.7.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.keygraphix.ios.SelectItemController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

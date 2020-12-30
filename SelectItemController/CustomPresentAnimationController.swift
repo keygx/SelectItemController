@@ -22,8 +22,8 @@ class CustomPresentAnimationController: NSObject, UIViewControllerAnimatedTransi
         
         toViewController.dialogView?.alpha = 0.2
         toViewController.dialogView?.transform = CGAffineTransform(scaleX: 1.16, y: 1.16)
-        toViewController.effectView.alpha = 0.2
-        toViewController.effectView.transform = CGAffineTransform(scaleX: 1.16, y: 1.16)
+        toViewController.stackView.alpha = 0.2
+        toViewController.stackView.transform = CGAffineTransform(scaleX: 1.16, y: 1.16)
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext),
                        delay: 0.0,
@@ -31,8 +31,8 @@ class CustomPresentAnimationController: NSObject, UIViewControllerAnimatedTransi
                        animations: {
                 toViewController.dialogView?.alpha = 1.0
                 toViewController.dialogView?.transform = CGAffineTransform.identity
-                toViewController.effectView.alpha = 1.0
-                toViewController.effectView.transform = CGAffineTransform.identity
+                toViewController.stackView.alpha = 1.0
+                toViewController.stackView.transform = CGAffineTransform.identity
             
             }, completion: { _ in
                 transitionContext.completeTransition(true)
